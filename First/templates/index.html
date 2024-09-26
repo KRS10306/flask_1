@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Krish</title>
+    <style media="screen">
+      h2{
+        color: grey
+      }
+    </style>
+  </head>
+  <body>
+    <h1>{{company_name}} Carrer</h1>
+    <div>
+      {% for job in jobs %}
+      {% include 'jobitem.html' %}
+      {% endfor %}
+    </div>
+  </body>
+</html>

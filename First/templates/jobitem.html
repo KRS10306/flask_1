@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .hello{
+        padding-bottom: 8px;
+        border-bottom: 1px solid black;
+        position: relative;
+      }
+      .col{
+        width: 90rem;
+      }
+      .btn{
+        width: 10rem;
+        position: absolute;
+        right: 0%;
+        bottom: 1rem;
+      }
+      button{
+        color: blue;
+        background: transparent;
+        border-width: 1px;
+        padding: 8px;
+        border-radius: 5px;
+        bottom: 100px;
+        transition: all 0.2s linear; /* Smooth transition for all properties */
+        border-color: blue;
+      }
+      button:hover{
+        background-color: blue;
+        color: white;
+        cursor: pointer;
+      }
+    </style>
+    <!-- <link rel="stylesheet" href="C:\Users\RISHIT\Desktop\flask_learn\First\templates\styles.css"> -->
+    </head>
+  <body>
+    <div class="hello">
+      <div class="col">
+      <h2>{{job['title']}}</h2>
+      <div><b>Location: </b><i>{{job['location']}}</i></div>
+      {% if 'salary' in job %}
+      <div><b>Salary: </b><i>{{job['salary']}}</i></div>
+      {% endif %}
+      </div>
+      <div class="btn">
+        <button type="'button'" name="button">Apply</button>
+      </div>
+    </div>
+  </body>
+</html>
